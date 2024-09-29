@@ -25,7 +25,7 @@ contract AdvancedToken is ERC20, ERC20Burnable, Pausable, AccessControl {
     event UnBlacklisted(address indexed account);
     event FeeCollected(address indexed from, address indexed to, uint256 amount);
 
-    constructor(string memory name, string memory symbol) ERC20(name, symbol) {
+    constructor(string memory "TryToken", string memory "TT") ERC20("TryToken", "TT") {
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _setupRole(PAUSER_ROLE, msg.sender);
         _setupRole(MINTER_ROLE, msg.sender);
